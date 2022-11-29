@@ -10,7 +10,7 @@ const [menu, setMenu] = useState(0)
 const [paciente, setPaciente] = useState(null)
 const [email, setEmail] = useState(null)
 const [estudio, setEstudio] = useState(null)
-const [fecha, setFecha] = useState(null)
+const [fecha, setFecha] = useState(new Date())
 const [hora, setHora] = useState(null)
 
 function HSubmit(e){
@@ -31,7 +31,6 @@ function RPSubmit(e){
 function RFSubmit(e){
    e.preventDefault();
   setMenu(3);
-
   setFecha(e.target.value)
   console.log(e.target.value)
   setHora(e.target.hora.value)
