@@ -28,12 +28,12 @@ function RPSubmit(e){
   setEstudio(e.target.estudio.value);
   console.log(menu);
 }
-function RFSubmit(e){
-   e.preventDefault();
+const RFSubmit=(date)=>{
   setMenu(3);
-  setFecha(e.target.value)
-  console.log(e.target.value)
-  setHora(e.target.hora.value)
+  setFecha(date.toDateString())
+  
+  console.log(date)
+ 
 }
 function CSubmit(e){
   console.log(menu);
@@ -51,7 +51,7 @@ function CSubmit(e){
         {menu===0?(<Home Submit ={HSubmit}/>):(<></>)}
         {menu===1?(<RegistroPaciente RPSubmit = {RPSubmit}/>):(<></>)}
         {menu===2?(<RegistroFecha Submit ={RFSubmit}/>):(<></>)}
-        {menu===3?(<Cita Submit = {CSubmit}  email = {email} estudio = {estudio} />):(<></>)}
+        {menu===3?(<Cita Submit = {CSubmit}  email = {email} estudio = {estudio} fecha ={fecha} hora ={hora}/>):(<></>)}
       </header>
     </div>
   );
