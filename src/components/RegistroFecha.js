@@ -11,18 +11,26 @@ const RegistroFecha =({Submit})=>{
     const [time, setTime] = useState("")
 
     const onChange =(e) =>{
-        setDate(e.date)
-        setDisabled(false)
+        setDate(e.value);
+        console.log(e.value);
+        setDisabled(false);
     }
+    const onClick =(e)=>{
+        let d =date.toDateString() + e.target.hora
+        setDate(d);
+        console.log(d);
+    }
+
+
     return(
 <div>
     <p>Elige una fecha</p>
-    <Calendar onChange={onChange} value={date}/>
-    <Form.Select disabled={disabled} name="hora" >
+    <Calendar onChange={setDate} value={date}/>
+    <Form.Select  name="hora" onChange={setTime} >
         {times.map(dt =>
             <option>{dt}</option>)}
     </Form.Select>
-    <Button onClick={()=>Submit(date)}>Aceptar</Button>
+    <Button type="submit"onClick={()=>Submit(date, time)}>Aceptar</Button>
 
     
     

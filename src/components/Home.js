@@ -1,7 +1,7 @@
 import { Form, Button , Row, Col} from "react-bootstrap"
 
 
-const Home = ({Submit}) => {
+const Home = ({Submit, Cita}) => {
 
     return(
         <Row>
@@ -13,7 +13,7 @@ const Home = ({Submit}) => {
             <Form.Group>
         <Form.Control type="text" placeholder="Folio de cita" />
             <Form.Text/>
-            <Button>Consultar cita</Button>
+            <Button onClick={Cita}>Consultar cita</Button>
             </Form.Group>
         </Form>
         </Col>
