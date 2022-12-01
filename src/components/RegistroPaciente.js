@@ -1,7 +1,7 @@
 import { Form, FormGroup, Button     } from "react-bootstrap"
 
 const  RegistroPaciente =({RPSubmit}) =>{
-const estudios =["Tomogragía", "Rayos X", "Ultrasonido"]
+const estudios =["Tomografía", "Rayos X", "Ultrasonido"]
     return(
         <div>
             <p>Registro paciente</p>
